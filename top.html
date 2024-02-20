@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keyword" content="">
+<meta name="discription" content="">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-4/js/4-1-4.js"></script>
+<title>My creater room</title>
+</head>
+
+<body>
+<header>
+	<div id="navi-pages">
+    <ul>
+    <li><a href="#about-me">about&nbsp;me</a></li>
+    <li><a href="#portfolio-web">homepages</a></li>
+	<li><a href="#portfolio-graphic">graphics</a></li>
+    <li><a href="#contact">contact</a></li>
+</ul>
+</div>
+	</header>
+	<div id="container">
+		<!--------画像のフェードイン、フェードアウト-------->
+		<div>
+			<p class="greeting">
+				Welcome to my create-room
+			</p>
+			<img src="images/view-slide-02.jpg" class="fade-image">
+		</div>
+			<style type="text/css">
+				.fade-image {
+					position: relative;
+					overflow: hidden;
+					width: 100vw;
+					height: 800px;
+					padding: 0;
+					margin: 0;
+					top: 0;
+				    left: 0;
+				    bottom: 0;
+				    right: 0;
+				    opacity: 0.5;
+				}
+				</style>
+				<!--------画像のフェードイン、フェードアウトここまで-------->
+				<div class="scroll-down">
+					<span>Scroll</span>
+				</div>
+
+				<style type="text/css">
+				/*スクロールダウン全体の場所*/
+				.scroll-down {
+					position: absolute;
+					bottom: 10px;
+					left: 50%;
+				}
+				/*Scrollテキストの描写*/
+				.scroll-down span {
+					position: absolute;
+					left: 10px;
+				    bottom: 8px;
+					color: #000;
+				    font-size: 1rem;
+				    letter-spacing: 0.05em;
+				  /*縦書き設定*/
+				  -ms-writing-mode: tb-rl;
+				  -webkit-writing-mode: vertical-rl;
+				  writing-mode: vertical-rl;
+				}
+				
+				/* 丸の描写 */
+				.scroll-down:before {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: -4px;
+					width: 10px;
+				    height: 10px;
+				    border-radius: 50%;
+				    background: #000;
+				    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+				    animation:
+				    circlemove 1.6s ease-in-out infinite,
+				    cirlemovehide 1.6s ease-out infinite;
+				}
+				
+				/*下からの距離が変化して丸の全体が上から下に動く*/
+				@keyframes circlemove{
+					0%{bottom: 45px;}
+					100%{bottom: -5px;}
+				}
+				/*上から下にかけて丸が透過→不透明→透過する*/
+				@keyframes cirlemovehide{
+					  0%{opacity: 0}
+					  50%{opacity: 1;}
+					  80%{opacity: 0.9;}
+					  100%{opacity: 0;}
+					}
+					
+					/* 線の描写 */
+					.scroll-down:after {
+						content: "";
+						/*描画位置*/
+						position: absolute;
+						bottom: 0;
+				        left: 0;
+						/*線の形状*/
+						width: 3px;
+						height: 70px;
+						background:#000;
+					}
+					</style>
+				
+				
+	<!--------アイキャッチここまで-------->
+	</div>
+	<!--------コンテンツここから-------->
+	<div id="contents">
+	<!--------トップへ戻るここから-------->
+		<p id="top-return">
+			<a href="#navi-pages">上へ<br>↑</a>
+		</p>
+
+		<style type="text/css">
+		#top-return {
+			position: fixed;
+			text-align: center;
+			padding: 30px;
+			border: 1px solid #fff;
+			border-radius: 100px;
+			bottom: 15px;
+			right: 20px;
+			font-size: 20px;
+			background-color: rgba(200, 200, 200, 0.5); /* 淡いグレーの背景を透明度50%で設定 */
+		}
+		#top-return a {
+			color:#EDDBDC;
+			display: block;
+			width: 60px;
+			height: 60px;
+			text-decoration-line: none;
+			}
+		#top-return a:hover {
+			transition: 0.3s;
+			cursor: pointer;
+		}
+</style>
+
+		<script type="text/javascript">
+		$(function(){
+			var pagetop = $('#top-return');
+			pagetop.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 130) {
+					pagetop.fadeIn();
+				} else {
+					pagetop.fadeOut();
+				}
+			});
+			pagetop.click(function () {
+				$('body, html').animate({ scrollTop: 0 }, 10);
+				return false;
+			});
+		});
+		</script>
+		<!--------トップへ戻るここまで-------->
+		<div id="about-yukio">
+		<!--------自己紹介ここから-------->
+		<div id="about-me">
+			<h1 class="fade-in-title">自己紹介</h1>
+			<img src="images/my-profile.jpg" class="fade-in">
+			<p id="my-history" class="fade-in">
+				私は1982年に静岡県静岡市生まれのアラフォーです。
+				<br>
+				愛知県内の大学卒業後、上京して約８年間接客業を経験。
+				<br>
+				副店長も拝命したが、Webデザイナーもやっていた同僚の影響で、Webデザイナーを志望。
+				<br>
+				仕事の傍ら、都内のWebスクールでWeb制作のノウハウと実務経験を積み、2012年に人材派遣会社でWebデザイナーに!
+				<br>
+				自社サイトの維持管理から、社内報作成のサポートなどグラフィックの業務も経験。
+				<br>
+				その後はECサイトの運営にも約3年携わり、カスタマーサポートから広告バナー作成などを経験!
+				<br>
+				コロナ禍と実家の事情を経て、2021年に静岡県浜松市へUターン。
+				<br>
+				ECサイト運営を約2年経験後、今は営業事務の傍らボランティアでWeb制作にも励行中!
+			</p>
+		</div>
+		<!--------自己紹介ここまで-------->
+		<!--------ポートフォリオ(Webサイト編)ここから-------->
+		<div id="portfolio-web">
+			<h1 class="fade-in-title">ポートフォリオ(ホームページ)</h1>
+			<!--------一般社団法人 日本皮革研究所-------->
+			<p class="index-intro">今まで手掛けてきたWeb制作の案件の一部をご紹介します。</p>
+			<section>
+				<figure>
+					<a href="http://www.jilr.or.jp/" target="_blank">
+						<img src="images/JILR.jpg" alt="一般社団法人 日本皮革研究所" class="fade-in">
+					</a>
+					<figcaption class="fade-in">一般社団法人 日本皮革研究所</figcaption>
+				</figure>
+				<table id="ever-made" class="fade-in" border="2">
+					<tr>
+						<td>担当内容</td>
+						<td>コーディング、デザイナー(一部)</td>
+					</tr>
+					<tr>
+						<td>制作期間</td>
+						<td>３ヶ月</td>
+					</tr>
+					<tr>
+						<td>担当ページ</td>
+						<td>コラーゲン定量、その他の分析、財団概要、FAQ</td>
+					</tr>
+					<tr>
+						<td>制作ツール </td>
+						<td>Dreamweaver、Photoshop、Illustrator</td>
+					</tr>
+					<tr>
+						<td>使用言語</td>
+						<td>HTML、CSS</td>
+					</tr>
+				</table>
+			</section>
+			<!--------ベルギー料理店シェ・ミカワ-------->
+			<section>
+				<figure>
+					<a href="http://www.chez-mikawa.co.jp/" target="_blank">
+						<img src="images/mikawa.jpg" alt="ベルギー料理店 シェ・ミカワ" class="fade-in">
+					</a>
+				<figcaption class="fade-in">ベルギー料理店 シェ・ミカワ</figcaption>
+				</figure>
+				<table id="ever-made" class="fade-in" border="2">
+					<tr>
+						<td>担当内容</td>
+						<td>コーディング</td>
+					</tr>
+					<tr>
+						<td>制作期間</td>
+						<td>３ヶ月</td>
+					</tr>
+					<tr>
+						<td>担当ページ</td>
+						<td>CONCEPT、DRINK、PARTY</td>
+					</tr>
+					<tr>
+						<td>制作ツール </td>
+						<td>Dreamweaver</td>
+					</tr>
+					<tr>
+						<td>使用言語</td>
+						<td>HTML、CSS、jQuery、JavaScript</td>
+					</tr>
+				</table>
+			</section>
+			<!--------公益財団法人 かわさき市民しきん-------->
+			<section>
+				<figure>
+					<a href="https://shimin-shikin.jp/" target="_blank">
+						<img src="images/KSS.JPG" alt="公益財団法人 かわさき市民しきん" class="fade-in">
+					</a>
+					<figcaption class="fade-in">公益財団法人 かわさき市民しきん</figcaption>
+				</figure>
+				<table id="ever-made" class="fade-in" border="2">
+					<tr>
+						<td>担当内容</td>
+						<td>コーディング</td>
+					</tr>
+					<tr>
+						<td>制作期間</td>
+						<td>３ヶ月</td>
+					</tr>
+					<tr>
+						<td>担当ページ</td>
+						<td>市民しきんを支える、市民しきんについて</td>
+					</tr>
+					<tr>
+						<td>制作ツール </td>
+						<td>Dreamweaver</td>
+					</tr>
+					<tr>
+						<td>使用言語</td>
+						<td>HTML、CSS、jQuery、JavaScript</td>
+					</tr>
+				</table>
+			</section>
+		</div>
+		<!--------ポートフォリオ(Webサイト編)ここまで-------->
+	<!--------ポートフォリオ(グラフィック編)ここから-------->
+	<div id="portfolio-graphic">
+		<h3 class="fade-in-title">ポートフォリオ(グラフィック)</h3>
+		<p class="index-intro">ここではグラフィックの案件をご紹介します。</p>
+		<!--------ミツバチたちと桜-------->
+		<section>
+			<figure>
+				<img src="images/bee-rose.jpg" alt="ミツバチたちと桜" class="fade-in">
+				<figcaption class="fade-in">ミツバチと桜</figcaption>
+			</figure>
+		</section>
+		<!--------ミツバチたちと向日葵-------->
+		<section>
+			<figure>
+				<img src="images/bee-sunflower.jpg" alt="ミツバチたちと向日葵" class="fade-in">
+				<figcaption class="fade-in">ミツバチたちと向日葵</figcaption>
+			</figure>
+		</section>
+		<!--------冷凍食品自動販売機-------->
+		<section>
+			<figure>
+				<img src="images/goods-banner.jpg" alt="冷凍食品自動販売機" class="fade-in">
+				<figcaption class="fade-in">冷凍食品自動販売機</figcaption>
+			</figure>
+		</section>
+		<!--------オンラインスクール広告バナー-------->
+		<section>
+			<figure>
+				<img src="images/samurai-banner.jpg" alt="侍エンジニア" class="fade-in">
+				<figcaption class="fade-in">オンラインスクール</figcaption>
+			</figure>
+		</section>
+	</div>
+	<!--------ポートフォリオ(グラフィック編)ここまで-------->
+	<!--------スキル一覧ここから-------->
+	<h1 class="fade-in-title">コーディング及びデザイン</h1>
+	<p class="index-intro">得意とするスキル一覧をご紹介します。</p>
+	<table id="skill-info" class="fade-in" border="2">
+		<tr>
+			<td>フロントエンド</td>
+			<td>HTML、CSS、jQuery、JavaScript</td>
+		</tr>
+		<tr>
+			<td>バックエンド</td>
+			<td>PHP</td>
+		</tr>
+		<tr>
+			<td>デザイン</td>
+			<td>Photoshop、Illustrator、InDesign、XD</td>
+		</tr>
+	</table>
+	<!--------スキル一覧ここまで-------->
+</div>
+	<!--------コンタクトここから-------->
+	<div id="contact">
+		<h1 class="fade-in-title">コンタクト</h1>
+		<p class="index-intro">
+			ここでは私のコンタクト一覧をご案内します。
+			<br>
+			お問い合わせがある場合、各SNSにてDMを送るかWordpressで制作のサイト内の
+			<br>
+			お問い合わせフォームよりお願いします。
+		</p>
+		<ul id="all-sns" class="fade-in">
+			<li><a href="http://www.instagram.com/hamama_tour" target="_blank"><img src="images/insta.jpg" width="80" height="80"></a></li>
+			<li><a href="https://twitter.com/yukitter0108" target="_blank"><img src="images/x-mark.jpg" width="80" height="80"></a></li>
+			<li><a href="http://myplace.greater.jp/wordpress/" target="_blank"><img src="images/my-blog.jpg" width="80" height="80"></a></li>
+		</ul>
+	</div>
+	<!--------コンタクトここまで-------->
+</div>
+</body>
+<style type="text/css">
+	.fade-in-title {
+		transition: 1.0s ease-in-out;
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	.fade-in-title.on {
+		transform: translateY(0);
+		opacity: 1.0;
+	}
+
+	</style>
+
+<script type="text/javascript">
+
+	$(window).scroll(function () {
+		var scrollAnimationElm = document.querySelectorAll('.fade-in-title');
+		var scrollAnimationFunc = function () {
+			for (var i = 0; i < scrollAnimationElm.length; i++) {
+				var triggerMargin = 100;
+				if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+					scrollAnimationElm[i].classList.add('on');
+				}
+			}
+		}
+		window.addEventListener('load', scrollAnimationFunc);
+		window.addEventListener('scroll', scrollAnimationFunc);
+	});
+</script>
+<style type="text/css">
+	.fade-in {
+		transition: 1.2s ease-in-out;
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	.fade-in.on {
+		transform: translateY(0);
+		opacity: 1.0;
+	}
+
+	</style>
+
+<script type="text/javascript">
+
+	$(window).scroll(function () {
+		var scrollAnimationElm = document.querySelectorAll('.fade-in');
+		var scrollAnimationFunc = function () {
+			for (var i = 0; i < scrollAnimationElm.length; i++) {
+				var triggerMargin = 100;
+				if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+					scrollAnimationElm[i].classList.add('on');
+				}
+			}
+		}
+		window.addEventListener('load', scrollAnimationFunc);
+		window.addEventListener('scroll', scrollAnimationFunc);
+	});
+</script>
+<style type="text/css">
+	.index-intro {
+		transition: 1.4s ease-in-out;
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	.index-intro.on {
+		transform: translateY(0);
+		opacity: 1.0;
+	}
+
+	</style>
+
+<script type="text/javascript">
+
+	$(window).scroll(function () {
+		var scrollAnimationElm = document.querySelectorAll('.index-intro');
+		var scrollAnimationFunc = function () {
+			for (var i = 0; i < scrollAnimationElm.length; i++) {
+				var triggerMargin = 100;
+				if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+					scrollAnimationElm[i].classList.add('on');
+				}
+			}
+		}
+		window.addEventListener('load', scrollAnimationFunc);
+		window.addEventListener('scroll', scrollAnimationFunc);
+	});
+</script>
+</html>
